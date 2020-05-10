@@ -1,0 +1,18 @@
+html {
+    background-color: #660000;
+}
+
+h1, h2, h3 {
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    
+
+}
+
+#container {
+    margin: 20% 0%;
+    text-align: center;
+    /* margin-top: 2rem; */
+
+}

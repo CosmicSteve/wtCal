@@ -1,0 +1,51 @@
+html {
+    background-color: #660000;
+}
+
+h1, h2, h3, b, p, a, ol, summary{
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+input[type='file'] {
+    color: white; 
+    margin-left: 50px;   
+  }
+
+h2 {
+    font-size: 27px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+.bullets {
+    font-weight: normal;
+    font-size: 15px;
+    list-style-type: none;
+}
+
+#container {
+    margin: 20% 0%;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+div button {
+    display: block;
+}
+
+a:hover {
+    color: #3366ff
+}
+
+b {
+    color: white;
+    font-size: 23px;
+}
+
+ol {
+    color: white;
+}

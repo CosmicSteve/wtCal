@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='index.css') }}">
+    <title>Provide Information</title>
+</head>
+<body>
+    <div id="container">
+        <h2>First time users must provide the following information</h2>
+        <br>
+        
+        <!-- <p>Please go to <a href="{{ url }}">This URL</a></p> --->
+        <form action="http://localhost:5000/" method="POST" enctype = "multipart/form-data" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                <b>{{ form.auth.label }}</b> (Can be found <a href="{{ url }}" target="_blank">here</a>) <br>
+                <details>
+                    <summary>Help</summary>
+                    <ol class="bullets">
+                        <li>Click the 'here' hyperlink above and sign in with Google</li>
+                        <li>Click the 'Advanced' hyperlink on the new page</li>
+                        <li>Click 'Go to WTCal(unsafe)'</li>
+                        <li>Click Allow Permission</li>
+                        <li>Click Allow again</li>
+                        <li>Now copy the code by clicking the clipboard icon or highlighting</li>
+                        <li>Go back to this website and paste the code into the first textbox</li>
+                    </ol>
+                    </details>
+                    <br> 
+                {{ form.auth(size=100) }}
+            </p>
+            <br>
+            
+            <p>
+                <b>{{ form.icalURL.label }}</b> (Can be found <a href="https://wtclass.wtamu.edu/webapps/calendar/viewPersonal" target="_blank">here</a>) <br>
+                <details>
+                    <summary>Help</summary>
+                    <ol class="bullets">
+                        <li>Click the 'here' hyperlink below and sign in to view your WT Calendar</li>
+                        <li>Click on 'Get External Calendar Link' button on bottom left of the screen</li>
+                        <li>Copy the URL inside of the popup</li>
+                        <li>Go back to the WTCal website and paste this into the second textbox</li>
+                    </ol>
+                </details> 
+                <br>
+                {{ form.icalURL(size=100) }}
+            </p>
+            <br>
+            
+            <p>
+                <b>Upload .ics File</b><br>
+                <details>
+                <summary>Help</summary>
+                <ol class="bullets">
+                    <li>Visit the external calendar link in a browser</li>
+                    <li>Save the file to somewhere accessible like your Desktop</li>
+                    <li>Click Browse button and upload the file (learn.ics)</li>
+                </ol>
+                </details>
+                <br>
+                <input type ="file" name ="file" title="Upload" />
+            </p>
+            <br>
+            <p>{{ form.submit() }}</p>
+            
+        </form>
+    </div>
+</body>
+</html>
